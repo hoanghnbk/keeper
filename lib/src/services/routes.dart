@@ -12,8 +12,6 @@ Route getRoute(RouteSettings setting) {
   print(setting.name);
   switch (setting.name) {
     case '/login':
-      print(
-          'awfacafafafawf/nawfawfawffwafawf/n\a\nwafawfawfawfafw\nawfafwafawfaw\n');
       return _buildRoute(
           setting,
           LoginPage(

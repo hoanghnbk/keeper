@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:keeper/src/bloc/auth/AuthBloc.dart';
 import 'package:keeper/src/bloc/auth/AuthEvent.dart';
+import 'package:keeper/src/ui/screens/KeeperScreen.dart';
 
 class HomePage extends StatefulWidget {
   @override
