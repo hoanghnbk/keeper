@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:keeper/src/ui/screens/Home.dart';
 import 'package:keeper/src/ui/widgets/HowToWidget.dart';
@@ -18,6 +17,10 @@ class _CarouselWithIndicatorState extends State<HowTo> {
     }
 
     return result;
+  }
+
+  _navigateToHome() {
+    Navigator.of(context).pushReplacementNamed('/home');
   }
 
   _onPageViewChange(int page) {
@@ -60,7 +63,7 @@ class _CarouselWithIndicatorState extends State<HowTo> {
                           width: double.infinity,
                           child: RaisedButton(
                             textColor: Colors.white,
-                            onPressed: () {},
+                            onPressed: _navigateToHome,
                             // state is! LoginLoading ? _onLoginButtonPressed : null,
                             child: Text('LET\'S GO'),
                             padding: EdgeInsets.symmetric(vertical: 15),
