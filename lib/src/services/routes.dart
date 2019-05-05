@@ -9,9 +9,8 @@ import 'package:keeper/src/ui/screens/Register.dart';
 Injector injector = Injector.appInstance;
 
 Route getRoute(RouteSettings setting) {
-  print(setting.name);
   switch (setting.name) {
-    case '/login':
+    case '/home':
       return _buildRoute(
           setting,
           LoginPage(
@@ -21,8 +20,6 @@ Route getRoute(RouteSettings setting) {
       return _buildRoute(setting, Register());
     case '/howto1':
       return _buildRoute(setting, HowTo());
-    case '/':
-    case '/home':
     default:
       print('getRoute + ' + setting.name);
       return _buildRoute(setting, HomePage());
@@ -30,7 +27,7 @@ Route getRoute(RouteSettings setting) {
 }
 
 MaterialPageRoute _buildRoute(RouteSettings settings, Widget builder) {
-  return new MaterialPageRoute(
+  return MaterialPageRoute(
     settings: settings,
     builder: (BuildContext context) => builder,
   );

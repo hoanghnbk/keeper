@@ -1,7 +1,38 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class DrawerWidget extends StatelessWidget {
   _onDashBoardTap(BuildContext context) {
+    Navigator.pop(context);
+    // Navigator.of(context).pushNamed('./Home');
+  }
+
+  _onMessageTap(BuildContext context) {
+    Navigator.pop(context);
+    // Navigator.of(context).pushNamed('./Home');
+  }
+
+  _onInterViewTap(BuildContext context) {
+    Navigator.pop(context);
+    // Navigator.of(context).pushNamed('./Home');
+  }
+
+  _onInTheWildTap(BuildContext context) {
+    Navigator.pop(context);
+    // Navigator.of(context).pushNamed('./Home');
+  }
+
+  _onJobPostingTap(BuildContext context) {
+    Navigator.pop(context);
+    // Navigator.of(context).pushNamed('./Home');
+  }
+
+  _onSettingsTap(BuildContext context) {
+    Navigator.pop(context);
+    // Navigator.of(context).pushNamed('./Home');
+  }
+
+  _onHelpTap(BuildContext context) {
     Navigator.pop(context);
     // Navigator.of(context).pushNamed('./Home');
   }
@@ -25,7 +56,7 @@ class DrawerWidget extends StatelessWidget {
                         shape: BoxShape.circle,
                         image: DecorationImage(
                           image: NetworkImage(
-                              'https://picsum.photos/id/237/200/300'),
+                              'https://picsum.photos/id/${Random().nextInt(2000)}/200'),
                           fit: BoxFit.cover,
                         )),
                   ),
@@ -45,27 +76,39 @@ class DrawerWidget extends StatelessWidget {
             ),
             _ListTile(
               title: 'MESSAGE',
-              onTap: () {},
+              onTap: () {
+                _onMessageTap(context);
+              },
             ),
             _ListTile(
               title: 'INTERVIEWS',
-              onTap: () {},
+              onTap: () {
+                _onInterViewTap(context);
+              },
             ),
             _ListTile(
               title: 'IN THE WILD',
-              onTap: () {},
+              onTap: () {
+                _onInTheWildTap(context);
+              },
             ),
             _ListTile(
               title: 'JOB POSTING',
-              onTap: () {},
+              onTap: () {
+                _onJobPostingTap(context);
+              },
             ),
             _ListTile(
               title: 'SETTINGS',
-              onTap: () {},
+              onTap: () {
+                _onSettingsTap(context);
+              },
             ),
             _ListTile(
               title: 'HELP',
-              onTap: () {},
+              onTap: () {
+                _onHelpTap(context);
+              },
             ),
           ],
         ),

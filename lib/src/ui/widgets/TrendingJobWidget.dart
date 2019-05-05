@@ -44,15 +44,14 @@ class _TrendingJobItemWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Container(
-            width: 60,
-            height: 60,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                  image: NetworkImage('https://picsum.photos/200'),
-                  fit: BoxFit.fill,
-                )),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(30.0),
+            child: FadeInImage(
+                fit: BoxFit.cover,
+                width: 60,
+                height: 60,
+                placeholder: AssetImage("lib/assets/loading_gif.gif"),
+                image: NetworkImage(trendingJobModel.srcImage)),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,

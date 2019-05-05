@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:keeper/src/bloc/auth/AuthBloc.dart';
 import 'package:keeper/src/bloc/auth/AuthEvent.dart';
 import 'package:keeper/src/mock.dart';
+
 import 'package:keeper/src/ui/widgets/DrawerWidget.dart';
 import 'package:keeper/src/ui/widgets/SquareStatisticWidget.dart';
 import 'package:keeper/src/ui/widgets/TrendingJobWidget.dart';
