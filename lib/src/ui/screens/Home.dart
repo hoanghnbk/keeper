@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:keeper/src/bloc/auth/AuthBloc.dart';
 import 'package:keeper/src/bloc/auth/AuthEvent.dart';
+import 'package:keeper/src/mock.dart';
+import 'package:keeper/src/ui/widgets/DrawerWidget.dart';
 import 'package:keeper/src/ui/widgets/SquareStatisticWidget.dart';
 import 'package:keeper/src/ui/widgets/TrendingJobWidget.dart';
 import 'package:keeper/src/ui/widgets/UpComingEventWidget.dart';
@@ -38,16 +40,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-        drawer: ListView(
-          children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
-              ),
-            ),
-          ],
-        ),
+        drawer: DrawerWidget(),
         body: Container(
           color: Color.fromRGBO(242, 242, 242, 1),
           padding: EdgeInsets.symmetric(horizontal: 10, vertical: 20),
@@ -73,13 +66,7 @@ class _HomePageState extends State<HomePage> {
                   )
                 ],
               ),
-              UpComingEventWidget(
-                listUpcomingWidget: [
-                  {'date': '4/2', 'time': '9AM'},
-                  {'date': '4/5', 'time': '1:30PM'},
-                  {'date': '4/12', 'time': '9AM'}
-                ],
-              ),
+              UpComingEventWidget(listUpcomingWidget: mockListUpcomingWidget),
               Container(
                 margin: EdgeInsets.all(5),
                 child: Text(
@@ -88,38 +75,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               TrendingJobWidget(
-                trendingJob: [
-                  {
-                    'srcImage': 'https://picsum.photos/200',
-                    'jobTitle': 'Some Title',
-                    'datePosted': 'datePosted',
-                    'applicantCounts': 4
-                  },
-                  {
-                    'srcImage': 'https://picsum.photos/200',
-                    'jobTitle': 'another Title',
-                    'datePosted': 'datePosted',
-                    'applicantCounts': 5
-                  },
-                  {
-                    'srcImage': 'https://picsum.photos/200',
-                    'jobTitle': 'new Title',
-                    'datePosted': 'datePosted',
-                    'applicantCounts': 2
-                  },
-                  {
-                    'srcImage': 'https://picsum.photos/200',
-                    'jobTitle': 'some another Title',
-                    'datePosted': 'datePosted',
-                    'applicantCounts': 2
-                  },
-                  {
-                    'srcImage': 'https://picsum.photos/200',
-                    'jobTitle': 'Job Title',
-                    'datePosted': 'datePosted',
-                    'applicantCounts': 2
-                  }
-                ],
+                trendingJob: mockTrendingJob,
               ),
             ],
           ),
