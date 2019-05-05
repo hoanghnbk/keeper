@@ -30,9 +30,9 @@ class _LoginPageState extends State<LoginPage> {
       authenticationBloc: _authenticationBloc,
     );
     super.initState();
-    Future.delayed(Duration(seconds: 1)).then((_) {
-      Navigator.pushReplacementNamed(context, '/howto1');
-    });
+    // Future.delayed(Duration(seconds: 1)).then((_) {
+    //   Navigator.pushReplacementNamed(context, '/howto1');
+    // });
   }
 
   @override
