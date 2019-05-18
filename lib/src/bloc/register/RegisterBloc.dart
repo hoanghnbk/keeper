@@ -35,7 +35,6 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   Stream<RegisterState> _handleRegisterButtonPressedEvent(
       RegisterButtonPressed event) async* {
     yield RegisterLoading();
-
     final token = await userRepository.registerNewCompany(
         companyName: event.companyName,
         companyEmail: event.companyEmail,

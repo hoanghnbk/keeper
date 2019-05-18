@@ -1,6 +1,7 @@
+import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
 
-class TrendingJobModel {
+class TrendingJobModel extends Equatable {
   final String srcImage;
   final String jobTitle;
   final String datePosted;

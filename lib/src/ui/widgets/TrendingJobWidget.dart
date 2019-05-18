@@ -47,11 +47,12 @@ class _TrendingJobItemWidget extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(30.0),
             child: FadeInImage(
-                fit: BoxFit.cover,
-                width: 60,
-                height: 60,
-                placeholder: AssetImage("lib/assets/loading_gif.gif"),
-                image: NetworkImage(trendingJobModel.srcImage)),
+              fit: BoxFit.cover,
+              width: 60,
+              height: 60,
+              placeholder: AssetImage("lib/assets/loading_gif.gif"),
+              image: NetworkImage(trendingJobModel.srcImage),
+            ),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
